@@ -10,6 +10,9 @@ describe Calculator do
 	end
 
 	describe '#output_answer' do
-		specify { expect { print("the answer is xxxxxx") }.to output.to_stdout }
+		it 'returns the number provided to the method' do
+			num = rand(100)
+			expect(subject.output_answer(num)).to eq "the answer is #{num}"
+		end
 	end
 end
